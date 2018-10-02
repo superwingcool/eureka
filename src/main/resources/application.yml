@@ -1,18 +1,13 @@
 server:
   port: 9001
 
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
 spring:
   application:
     name: eureka
-
-#eureka:
-#  client:
-#    registerWithEureka: false
-#    fetchRegistry: false
-
-eureka:
-  client:
-    registerWithEureka: false #不用去注册到eureka server上
-    fetchRegistry: false
-    service-url:
-      defaultZone: http://localhost:9001/eureka
